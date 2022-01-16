@@ -23,12 +23,11 @@ export default class CatIndex extends Component {
   render() {
    return (
      <div>
-      <CatList cats={this.state.breeds} />
+      <CatList breeds={this.state.breeds} />
      </div>
    );
    
    }
 }
 
-//export default CatIndex
 

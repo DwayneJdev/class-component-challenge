@@ -6,7 +6,7 @@ export default class Catlist extends Component {
 render() {
  return (
    <div>
-     {this.props.breeds.Map(cat => <li>{cat}</li> )}
+     {this.props.breeds.Map(breeds => <li>{breeds}</li> )}
    </div>
  )
 }

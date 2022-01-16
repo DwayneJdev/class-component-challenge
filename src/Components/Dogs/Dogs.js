@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container} from 'reactstrap';
- import cornDogs from './DogIndex';
+ import CornDogs from './DogIndex';
 const Dogs = () => {
 
   return (
@@ -18,7 +18,7 @@ const Dogs = () => {
         <li>Make sure to include some good practice error handling</li>
       </ul>
       <hr />
-      <cornDogs />
+      <CornDogs />
     </Container>
     
 

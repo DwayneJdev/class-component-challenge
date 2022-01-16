@@ -1,27 +1,36 @@
-import React, {useState} from 'react';
+import React, {Component} from 'react';
 
-const [dogPic, setDogPic] = useState()
- const cornDogs =() => {
+export default class CornDogs extends Component {
+     constructor(props) {
+         super(props);
+         this.state = {dog: {}, dogPic: ""}
+     }
+    //  componentDidMount() {
+    //     this.randomImg()
+    // }
 
-    
-
-    const randomImg =(() => {
+     randomImg () {
         fetch('https://dog.ceo/api/breeds/image/random')
         .then(response => response.json())
-        .then(data => setDogPic(data.message))
-    })
+        .then(data => {this.setState({dog: data, dogPic: data.message})})
+     }
+
+     componentDidMount() {
+         this.randomImg()
+     }
 
 
 
-    
+    render() {
     return(
         <div className='main Dogs'>
-            <button onClick={randomImg}></button>
-
-            {dogPic && <img src={dogPic}></img>}
+            <button onClick={() => this.randomImg()}>random pup</button>
+            <br />
+            
+            <img src={this.state.dogPic} height={"400 px"} width={"400px"} alt="bark bark"></img>
         </div>
     );
+    }
  }
 
 
-export default cornDogs;

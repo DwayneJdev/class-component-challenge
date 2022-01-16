@@ -27,7 +27,7 @@ export default class CornDogs extends Component {
             <button onClick={() => this.randomImg()}>random pup</button>
             <br />
             
-            <img src={this.state.dogPic} height={"400 px"} width={"400px"} alt="bark bark"></img>
+            <img src={this.state.dogPic} height={"400 px"} width={"500px"} alt="bark bark"></img>
         </div>
     );
     }
